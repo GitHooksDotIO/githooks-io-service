@@ -17,11 +17,17 @@ You will also be able to add/edit/delete GitHook webhooks easily, and also view 
 ### Usage statistics
 Start tracking how many repositories are using a given GitHook, giving users an idea of a GitHook's popularity.
 
-### Example GitHook: Master Protection
+### GitHook: Super Protected Branches
 A GitHook which rolls back any commits made directly to master and/or a branch of your choice, automatically branching it and making a pull request instead.
 
-### Example GitHook: Forced Code Reviews
+### GitHook: Forced Code Reviews
 A GitHook which unmerges any PR which was opened and merged by the same person.
+
+### GitHook: Open Source Cleaner
+When you make your private repository public, this GitHook will clear all commit history and replace it with one commit.
+
+### Pull Request Cleaner
+When a PR is opened, merge all commits into one.
 
 ### More GitHook parameter types
 GitHooks can be parameterised, but at the moment we just have a text input field for each parameter. Some parameters ought to be checkboxes (i.e. boolean) or select/option inputs (i.e. limited choice), although of course in the URL these will all be converted to string.
