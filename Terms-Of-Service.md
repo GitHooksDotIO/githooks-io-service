@@ -24,4 +24,4 @@ You agree also to not write GitHooks which are so badly or maliciously written t
 
 By contributing your webhook to GitHooks.io, you agree to let GitHooks.io host and execute your code until you revoke your webhook.
 
-If another user contributes your webhook to GitHooks.io on your behalf, we will assume permissions has been granted by yourselves if your repository is open-source and there is the presence of a `githooks.yml` file in the root.
+If another user contributes your repository to GitHooks.io on your behalf, we will assume permission has been implicitly granted by you if your repository is open-source and there is the presence of a `.githook.yml` file in the root.
