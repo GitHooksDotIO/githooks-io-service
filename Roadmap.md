@@ -42,3 +42,6 @@ We'll start off with very few GitHooks, but over time we'll need search function
 
 ### Support for additional webhook languages
 Let people write GitHooks in more than just Node.
+
+### Tagging
+`.githook.yml` will be able to list tags, which will enable users to find and compare related GitHooks before they choose to install.
