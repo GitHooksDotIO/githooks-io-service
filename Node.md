@@ -3,7 +3,7 @@
 There is a [boilerplate/skeleton-code/hello-world project](https://github.com/GitHooksIO/boilerplate-githook) just waiting to be cloned and worked on!
 
 ## Cheat sheet
-Your Node GitHook can access the following properties:
+Here is an example Node GitHook, with all the defined properties it can access:
 
 ```javascript
 module.exports = function (data, process) {
@@ -28,6 +28,8 @@ process.fail('This failed for some reason!');
 
 ## Available modules
 Our infrastructure has [Node's 'request' HTTP Client](https://github.com/request/request) installed, which you can make use of in your code (accessible via `request`).
+
+You CANNOT use any other NPM modules, unfortunately - nor can you require any custom modules in the same repository. Your GitHook must be _entirely self-contained_ in the file you specified as your entry point.
 
 ## Example
 An example implementation of a GitHook is available at [https://github.com/GitHooksIO/githook-pr-editor](https://github.com/GitHooksIO/githook-pr-editor).
