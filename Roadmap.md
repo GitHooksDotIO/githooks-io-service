@@ -1,8 +1,8 @@
 # Roadmap
 
-## Coming soon
+## In progress
 
-### GitHook thumnails
+### GitHook thumbnails
 The site is a little text-heavy. Taking inspiration from [npmjs.com](https://www.npmjs.com/), GitHooks will let GitHook owners specify thumbnails for their GitHooks.
 
 ### Better documentation
