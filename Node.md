@@ -1,23 +1,19 @@
 # Writing a GitHook in Node
+## Get started
+There is a [boilerplate/skeleton-code/hello-world project](https://github.com/GitHooksIO/boilerplate-githook) just waiting to be cloned and worked on!
+
 ## Cheat sheet
 Your Node GitHook can access the following properties:
 
 ```javascript
-var request, // useful RESTful module for HTTP requests
-    succeed, // githooks must call this to end the request
-    fail,    // or this!
-    ACCESS_TOKEN, // the access token of the user who installed your GitHook
-    GET,          // the parameters you set up, e.g. GET.template.
-    PAYLOAD       // the payload JSON object originally sent by GitHub
-```
-
-## Constants
-You'll want to make use of these constants in your code:
-
-```
-ACCESS_TOKEN // the access token of the user who installed your GitHook
-GET          // the parameters you set up, e.g. GET.template.
-PAYLOAD      // the payload JSON object originally sent by GitHub
+module.exports = function (data, process) {
+    request;           // Useful HTTP request client. See https://www.npmjs.com/package/request
+    data.payload;      // the original GitHub payload information (JSON), forwarded to your GitHook
+    data.parameters;   // any custom parameters the user has installed your GitHook with. Access like data.parameters.my_template
+    data.access_token; // the access token of the user who installed your GitHook
+    process.succeed(); // tell GitHooks.io that your GitHook has completed successfully
+    process.fail();    // tell GitHooks.io that your GitHook ran into an issue
+};
 ```
 
 ## GitHook termination
@@ -26,37 +22,12 @@ Your GitHook must explicitly say when it has finished. It can reveal it succeede
 To say that your GitHook has finished, you need to call one of the following methods:
 
 ```
-succeed('All was good!');
-fail('This failed for some reason!');
+process.succeed('All was good!');
+process.fail('This failed for some reason!');
 ```
 
 ## Available modules
 Our infrastructure has [Node's 'request' HTTP Client](https://github.com/request/request) installed, which you can make use of in your code (accessible via `request`).
-
-A quick example is shown below:
-
-```
-var options = {
-    url:      PAYLOAD.pull_request.url,
-    headers: {
-        'Content-Type':  'application/json',
-        'User-Agent':    'some-user-agent',
-        'Authorization': 'token ' + ACCESS_TOKEN
-    },
-    json: {
-        "body": PAYLOAD.pull_request.body + "\n" + body
-    }
-};
-
-request.post(options, function templatePosted(err, httpResponse, body) {
-    if (err) {
-        fail('Could not send POST request: ' + err);
-    }
-    else {
-        succeed('Template POST message successful. Response:' + body);
-    }
-});
-```
 
 ## Example
 An example implementation of a GitHook is available at [https://github.com/GitHooksIO/githook-pr-editor](https://github.com/GitHooksIO/githook-pr-editor).
