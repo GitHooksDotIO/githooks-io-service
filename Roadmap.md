@@ -2,23 +2,22 @@
 
 ## Coming soon
 
-### GitHook contribution
-It should be possible to submit your own GitHook-compatible webhooks to the system.
-Projects will require a configuration file, and they will have to be in dedicated open-source repositories.
+### GitHook thumnails
+The site is a little text-heavy. Taking inspiration from [npmjs.com](https://www.npmjs.com/), GitHooks will let GitHook owners specify thumbnails for their GitHooks.
 
-### Detailed documentation
-...for users and contributors.
+### Better documentation
+Listing available events and user scopes.
 
-### Complete Webhook management
-Rather than just 1-click installs, you will now be able to see all installed webhooks for a given repository. If they're hosted on GitHooks.io, we will keep track of which events/permissions are required and update your repository's usage of that webhook automatically.
-
-You will also be able to add/edit/delete GitHook webhooks easily, and also view non-GitHook webhooks, with perhaps some limited interaction there.
+### More GitHook parameter types
+GitHooks can be parameterised, but at the moment we just have a text input field for each parameter. Some parameters ought to be checkboxes (i.e. boolean) or select/option inputs (i.e. limited choice), although of course in the URL these will all be converted to string.
 
 ### Usage statistics
 Start tracking how many repositories are using a given GitHook, giving users an idea of a GitHook's popularity.
 
 ### GitHook: Super Protected Branches
 A GitHook which rolls back any commits made directly to master and/or a branch of your choice, automatically branching it and making a pull request instead.
+
+## In the pipeline
 
 ### GitHook: Forced Code Reviews
 A GitHook which unmerges any PR which was opened and merged by the same person.
@@ -32,10 +31,10 @@ When a PR is opened, merge all commits into one.
 ### GitHook: Delete Merged Branches
 When a PR is merged, the merged branch is automatically deleted.
 
-### More GitHook parameter types
-GitHooks can be parameterised, but at the moment we just have a text input field for each parameter. Some parameters ought to be checkboxes (i.e. boolean) or select/option inputs (i.e. limited choice), although of course in the URL these will all be converted to string.
+### Complete Webhook management
+Rather than just 1-click installs, you will now be able to delete GitHooks from within GitHooks.io or edit your custom parameters. You will be able to 'own' GitHooks installed by other users in your organisation, so that the GitHook runs as you and not them.
 
-## In the pipeline
+We may offer a dedicated webhook view for any one of your given repositories, letting you view and edit both GitHooks and standard webhooks.
 
 ### Search functionality
 We'll start off with very few GitHooks, but over time we'll need search functionality.
