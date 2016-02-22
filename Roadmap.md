@@ -14,9 +14,6 @@ GitHooks can be parameterised, but at the moment we just have a text input field
 ### Usage statistics
 Start tracking how many repositories are using a given GitHook, giving users an idea of a GitHook's popularity.
 
-### GitHook: Super Protected Branches
-A GitHook which rolls back any commits made directly to master and/or a branch of your choice, automatically branching it and making a pull request instead.
-
 ## In the pipeline
 
 ### GitHook: Forced Code Reviews
