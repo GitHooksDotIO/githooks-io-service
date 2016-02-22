@@ -31,7 +31,10 @@ When a PR is opened, merge all commits into one.
 ### GitHook: Delete Merged Branches
 When a PR is merged, the merged branch is automatically deleted.
 
-### Complete Webhook management
+### GitHook: Automated Tagging
+Given a filename and property (e.g. `package.json` and `version`), whenever the version number changes, a tag is automatically created.
+
+### Complete Webhook management
 Rather than just 1-click installs, you will now be able to delete GitHooks from within GitHooks.io or edit your custom parameters. You will be able to 'own' GitHooks installed by other users in your organisation, so that the GitHook runs as you and not them.
 
 We may offer a dedicated webhook view for any one of your given repositories, letting you view and edit both GitHooks and standard webhooks.
