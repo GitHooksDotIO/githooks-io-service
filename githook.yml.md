@@ -9,11 +9,12 @@ description: "This is my description of my Hello World application."
 # relative to the root
 entry_point: hello-world.js
 
-# require at least one event to trigger the GitHook
+# require at least one event to trigger the GitHook. See 'Events' below.
 triggered_on:
   - push
 
-# optional. Add as many scopes as required. Note that 'admin:repo_hook' will always be available, since it is required by GitHooks.io to properly manage GitHook installations.
+# optional. Add as many scopes as required. See 'Scopes' below.
+# Note that 'admin:repo_hook' will always be available, since it is required by GitHooks.io to properly manage GitHook installations.
 scopes_required:
   - 'user:email'
 
@@ -32,6 +33,12 @@ tags:
   - something
   - something-else
 ```
+
+## Events
+See [http://githooks.io/events](http://githooks.io/events)
+
+## Scopes
+See [http://githooks.io/scopes](http://githooks.io/scopes)
 
 ## Parameterised GitHooks
 You can specify parameters to be sent along with your GitHooks - these will be appended to the webhook URL as a GET parameter.
