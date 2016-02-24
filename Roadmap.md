@@ -2,12 +2,6 @@
 
 ## In progress
 
-### GitHook thumbnails
-The site is a little text-heavy. Taking inspiration from [npmjs.com](https://www.npmjs.com/), GitHooks will let GitHook owners specify thumbnails for their GitHooks.
-
-### Better documentation
-Listing available events and user scopes.
-
 ### More GitHook parameter types
 GitHooks can be parameterised, but at the moment we just have a text input field for each parameter. Some parameters ought to be checkboxes (i.e. boolean) or select/option inputs (i.e. limited choice), although of course in the URL these will all be converted to string.
 
