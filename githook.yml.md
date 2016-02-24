@@ -5,6 +5,7 @@ GitHooks.io looks for a YAML file called `.githook.yml` in the root of your repo
 title:       Hello World
 version:     0.1.0
 description: "This is my description of my Hello World application."
+thumbnail:   http://path/to/thumbnail.jpg # optional. Defaults to your user avatar.
 
 # relative to the root
 entry_point: hello-world.js
