@@ -25,9 +25,6 @@ When you make your private repository public, this GitHook will clear all commit
 ### GitHook: Pull Request Cleaner
 When a PR is opened, merge all commits into one.
 
-### GitHook: Delete Merged Branches
-When a PR is merged, the merged branch is automatically deleted.
-
 ### GitHook: Automated Tagging
 Given a filename and property (e.g. `package.json` and `version`), whenever the version number changes, a tag is automatically created.
 
