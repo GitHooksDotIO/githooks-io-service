@@ -16,19 +16,19 @@ You go to the GitHook page, and can see an 'Install' section where you can choos
 
 Some GitHooks also have parameters you can play with. For instance, the PR Editor GitHook requires a URL to a markdown/text file which is to be appended to new Pull Requests.
 
-<img width="486" alt="screen shot 2016-06-18 at 18 41 24" src="https://cloud.githubusercontent.com/assets/16819594/16172564/8bcfb37c-3584-11e6-9a34-286fa061b043.png">
+![screenshot of user input form](https://cloud.githubusercontent.com/assets/16819594/16172564/8bcfb37c-3584-11e6-9a34-286fa061b043.png)
 
 You hit 'Install GitHook': this creates a new webhook inside your repository settings.
 
-<img width="753" alt="screen shot 2016-06-18 at 18 42 24" src="https://cloud.githubusercontent.com/assets/16819594/16172662/a987ea56-3584-11e6-8c3f-d9668e90aaaa.png">
+![screenshot of webhook entry on github]("https://cloud.githubusercontent.com/assets/16819594/16172662/a987ea56-3584-11e6-8c3f-d9668e90aaaa.png)
 
 The webhook's payload URL is pre-defined for you, as is the content type (which currently has to be `application/x-www-form-urlencoded`), and the Secret. The Secret is completely unique to this GitHook installation on your repository, and will be used later on in the identification process.
 
-<img width="497" alt="screen shot 2016-06-18 at 18 42 34" src="https://cloud.githubusercontent.com/assets/16819594/16172665/b7fed900-3584-11e6-921b-3e316f476f86.png">
+![screenshot of webhook config on github](https://cloud.githubusercontent.com/assets/16819594/16172665/b7fed900-3584-11e6-921b-3e316f476f86.png)
 
 The event required by the GitHook is also selected automatically. You (the user) don't have to do anything!
 
-<img width="322" alt="screen shot 2016-06-18 at 18 47 56" src="https://cloud.githubusercontent.com/assets/16819594/16172681/37634e24-3585-11e6-8b5f-cc3c01d8ad11.png">
+![screenshot of pre-selected webhook event](https://cloud.githubusercontent.com/assets/16819594/16172681/37634e24-3585-11e6-8b5f-cc3c01d8ad11.png)
 
 The GitHook is now active and ready.
 
