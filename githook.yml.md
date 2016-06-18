@@ -38,6 +38,9 @@ tags:
   - something-else
 ```
 
+## Validation
+You should validate your GitHook's YAML config file using our [validator service](http://githooks.io/validate).
+
 ## Events
 See [http://githooks.io/events](http://githooks.io/events)
 
