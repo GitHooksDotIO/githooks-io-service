@@ -20,7 +20,7 @@ Some GitHooks also have parameters you can play with. For instance, the PR Edito
 
 You hit 'Install GitHook': this creates a new webhook inside your repository settings.
 
-![screenshot of webhook entry on github]("https://cloud.githubusercontent.com/assets/16819594/16172662/a987ea56-3584-11e6-8c3f-d9668e90aaaa.png)
+![screenshot of webhook entry on github](https://cloud.githubusercontent.com/assets/16819594/16172662/a987ea56-3584-11e6-8c3f-d9668e90aaaa.png)
 
 The webhook's payload URL is pre-defined for you, as is the content type (which currently has to be `application/x-www-form-urlencoded`), and the Secret. The Secret is completely unique to this GitHook installation on your repository, and will be used later on in the identification process.
 
