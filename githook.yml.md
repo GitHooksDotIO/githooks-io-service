@@ -10,12 +10,15 @@ thumbnail:   http://path/to/thumbnail.jpg # optional. Defaults to your user avat
 # relative to the root
 entry_point: hello-world.js
 
+# specify the language your GitHook is written in (currently only node_js is supported)
+language: node_js
+
 # require at least one event to trigger the GitHook. See 'Events' below.
 triggered_on:
   - push
 
 # optional. Add as many scopes as required. See 'Scopes' below.
-# Note that 'admin:repo_hook' will always be available, since it is required by GitHooks.io to properly manage GitHook installations.
+# Note that 'admin:repo_hook' will always be available (since it is required by GitHooks.io to properly manage GitHook installations) - but you should still specify it if you need it, just to be safe.
 scopes_required:
   - 'user:email'
 
