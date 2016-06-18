@@ -28,6 +28,9 @@ When a PR is opened, merge all commits into one.
 ### GitHook: Automated Tagging
 Given a filename and property (e.g. `package.json` and `version`), whenever the version number changes, a tag is automatically created.
 
+### GitHook: Label reorganiser
+When a new repo is created, automatically reconfigure the GitHub Issues labels with your preferred configuration.
+
 ### Complete Webhook management
 Rather than just 1-click installs, you will now be able to delete GitHooks from within GitHooks.io or edit your custom parameters. You will be able to 'own' GitHooks installed by other users in your organisation, so that the GitHook runs as you and not them.
 
