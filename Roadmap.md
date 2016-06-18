@@ -2,6 +2,9 @@
 
 ## In progress
 
+### GitHook validation
+Before contributing a GitHook to GitHooks.io, it should be possible for users to validate their `.githook.yml` file.
+
 ### More GitHook parameter types
 GitHooks can be parameterised, but at the moment we just have a text input field for each parameter. Some parameters ought to be checkboxes (i.e. boolean) or select/option inputs (i.e. limited choice), although of course in the URL these will all be converted to string.
 
@@ -9,6 +12,9 @@ GitHooks can be parameterised, but at the moment we just have a text input field
 Start tracking how many repositories are using a given GitHook, giving users an idea of a GitHook's popularity.
 
 ## In the pipeline
+
+### Ongoing GitHook validation
+Contributed GitHooks should be able to install a GitHook validation GitHook to their repositories, which listen for updates to the `master` branch and re-validate the GitHook. The validation result can be included as a bade as part of a README - so maintainers will know pretty quickly if they've broken anything!
 
 ### GitHook: Forced Code Reviews
 A GitHook which unmerges any PR which was opened and merged by the same person.
