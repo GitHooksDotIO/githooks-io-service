@@ -35,7 +35,7 @@ parameters:
     title:       Curry flavour
     description: What are you eating?
     type:        select
-    values: # only valid for `select` type
+    values: # only valid for `select` type. First provided option will be the default
       - Beef
       - Chicken
       - Vegetable
