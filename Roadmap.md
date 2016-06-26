@@ -13,9 +13,6 @@ Rather than shoehorning the admin stuff into the GitHook view, offer a dedicated
 
 ## In the pipeline
 
-### Validation badges
-The validator service is already functional - but we should make it easy to add a validation badge to your README by providing the necessary markup on your GitHook admin screen.
-
 ### GitHook: Forced Code Reviews
 A GitHook which unmerges any PR which was opened and merged by the same person.
 
