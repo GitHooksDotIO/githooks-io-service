@@ -27,10 +27,18 @@ parameters:
   'my_parameter_name':
     title:       Name
     description: Who am I greeting?
-    # options: 'string', 'url', 'boolean'. default: 'string'
+    # options: 'string', 'url', 'number', 'boolean', 'select'. default: 'string'
     type:        string
     # options: 'yes', 'no'. default: 'no'
     required:    no
+  'curry_flavour':
+    title:       Curry flavour
+    description: What are you eating?
+    type:        select
+    values: # only valid for `select` type
+      - Beef
+      - Chicken
+      - Vegetable
 
 # optional
 tags:
