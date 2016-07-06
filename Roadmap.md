@@ -2,9 +2,6 @@
 
 ## In progress
 
-### More GitHook parameter types
-GitHooks can be parameterised, but at the moment we just have a text input field for each parameter. Some parameters ought to be checkboxes (i.e. boolean) or select/option inputs (i.e. limited choice), although of course in the URL these will all be converted to string.
-
 ### Versioned GitHook installs
 Using GitHub tags.
 
@@ -15,6 +12,9 @@ Start tracking how many repositories are using a given GitHook, giving users an 
 Rather than shoehorning the admin stuff into the GitHook view, offer a dedicated admin view.
 
 ## In the pipeline
+
+### 'Select' GitHook parameter type
+Will be able to provide users with a dropdown list of available parameter values.
 
 ### GitHook: Forced Code Reviews
 A GitHook which unmerges any PR which was opened and merged by the same person.
