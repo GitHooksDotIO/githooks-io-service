@@ -5,6 +5,9 @@
 ### More GitHook parameter types
 GitHooks can be parameterised, but at the moment we just have a text input field for each parameter. Some parameters ought to be checkboxes (i.e. boolean) or select/option inputs (i.e. limited choice), although of course in the URL these will all be converted to string.
 
+### Versioned GitHook installs
+Using GitHub tags.
+
 ### Usage statistics
 Start tracking how many repositories are using a given GitHook, giving users an idea of a GitHook's popularity.
 
@@ -38,6 +41,9 @@ We'll start off with very few GitHooks, but over time we'll need search function
 
 ### Support for additional webhook languages
 Let people write GitHooks in more than just Node.
+
+### User scope management
+GitHook users will have an admin area where they can allow or revoke granular scopes, and see what scopes they have already granted.
 
 ### Tagging
 `.githook.yml` will be able to list tags, which will enable users to find and compare related GitHooks before they choose to install.
