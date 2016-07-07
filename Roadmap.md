@@ -33,6 +33,9 @@ Rather than just 1-click installs, you will now be able to delete GitHooks from 
 
 We may offer a dedicated webhook view for any one of your given repositories, letting you view and edit both GitHooks and standard webhooks.
 
+### GitHook: Twitter integration
+By passing a Twitter handle and authentication token to a GitHook, it should be possible to automatically tweet when you tag a new release.
+
 ### Search functionality
 We'll start off with very few GitHooks, but over time we'll need search functionality.
 
