@@ -8,9 +8,6 @@ Using GitHub tags.
 ### Usage statistics
 Start tracking how many repositories are using a given GitHook, giving users an idea of a GitHook's popularity.
 
-### Dedicated admin screen for your contributed GitHooks
-Rather than shoehorning the admin stuff into the GitHook view, offer a dedicated admin view.
-
 ## In the pipeline
 
 ### 'Select' GitHook parameter type
