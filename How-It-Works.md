@@ -1,7 +1,7 @@
 # How It Works
 We'll explain how GitHooks.io works by going through a worked example: the [PR Editor GitHook](http://githooks.io/githooks/GitHooksIO/githook-pr-editor). We'll cover every step a user would take in getting the GitHook installed and seeing it working.
 
-The PR Editor allows you to provide a template which will be automatically appended to every new Pull Request. This is intended for appending checklists to Pull Requests. In February 2016, GitHub provided this functionality natively, so we no longer recommend using this GitHook - but it is still a good example for the purposes of this guide.
+The PR Editor allows you to provide a template which will be automatically appended to every new Pull Request - this is intended for appending checklists to Pull Requests. In February 2016, GitHub provided this functionality natively, so we no longer recommend using this GitHook - but it is still a good example for the purposes of this guide.
 
 ## Background information
 Every GitHook contributed to GitHooks.io has its own row in the database, detailing the owner (in this case, `GitHooksIO`) and the GitHook name (in this case, `githook-pr-editor`), corresponding to the repository and repository owner on GitHub.com.
@@ -9,10 +9,14 @@ Every GitHook contributed to GitHooks.io has its own row in the database, detail
 We call the GitHook repository the **provider**.
 
 ## Signing into GitHooks.io
-You're a user with a repository, and want to install a GitHook. *Your* repository is the **consumer**. The first step is creating an account on GitHooks.io - which is as easy as clicking 'Sign in with GitHub'.
+You're a user with a repository, and want to install a GitHook. *Your* repository is the **consumer**. The first step is creating an account on GitHooks.io - which is as easy as clicking 'Sign in with GitHub'. By default, GitHooks.io won't ask for any **scopes** beyond what is publicly available.
 
 ## Installing a webhook
-You go to the GitHook page, and can see an 'Install' section where you can choose which repository you want to install the GitHook to.
+You go to the GitHook page, and can see an 'Install' section. Right now, you haven't granted enough permissions to GitHooks.io yet - this GitHook requires Public/Private Repository access - so you'll have to click 'Grant additional permissions'.
+
+![Grant additional permissions](https://cloud.githubusercontent.com/assets/16819594/16716188/8f7a01b0-46ed-11e6-8751-e035a898950f.png)
+
+Upon granting additional permissions, you're redirected back to the GitHook page, where you can choose which repository you want to install the GitHook to.
 
 Some GitHooks also have parameters you can play with. For instance, the PR Editor GitHook requires a URL to a markdown/text file which is to be appended to new Pull Requests.
 
@@ -82,7 +86,7 @@ All being well, the access token is suitable, and we can now execute the GitHook
 ### Forwarding the request to AWS Lambda
 GitHooks.io will now parse the `.githook.yml` configuration to determine which language the webhook is written in (we currently only support Node JS), and where the entry point to the webhook is (i.e. the file we need to execute).
 
-We'll also check to see if all of the requirements have been fulfilled. For instance, the PR Editor GitHook *requires* that a `template` parameter is supplied - it will not run without it. In this case, we check for any `GET` parameters in the payload URL, and can see there is a `template` parameter, so that requirement is fulfilled.
+We'll also check to see if all of the requirements have been fulfilled. For instance, the PR Editor GitHook *requires* that a `template` parameter is supplied - it will not run without it. In this case, we check for any parameters (which were stored in the database at the time of installation), and can see there is a `template` parameter, so that requirement is fulfilled.
 
 ± note to self: this is a bit of a lie - no parameter checking happens until we reach Lambda
 
