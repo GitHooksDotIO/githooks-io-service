@@ -10,6 +10,9 @@ Start tracking how many repositories are using a given GitHook, giving users an 
 
 ## In the pipeline
 
+### Add support for latest Webhook events
+GitHub added some new events in April: https://github.com/blog/2156-expanded-webhook-events
+
 ### 'Select' GitHook parameter type
 Will be able to provide users with a dropdown list of available parameter values.
 
