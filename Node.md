@@ -16,6 +16,34 @@ module.exports = function (data, process) {
 };
 ```
 
+## Making a request
+Here's a nonsense example which makes a request ([read more](https://www.npmjs.com/package/request)) to the GitHub API ([read more](https://developer.github.com/v3/)).
+
+```js
+module.exports = function (data, process) {
+    var options = {
+            url:      data.payload.pull_request.url,
+            headers: {
+                'Content-Type':  'application/json',
+                'User-Agent':    'pr-editor',
+                'Authorization': 'token ' + data.access_token
+            },
+            json: {
+                "body": data.payload.pull_request.body + "\n" + data.parameters.user_githook_parameter_fish_and_chips + "\n-----\n" + "Template automatically appended by githook-pr-editor."
+            }
+        };
+
+    request.post(options, function templatePosted(err, httpResponse, body) {
+        if (err) {
+            process.fail('Could not send POST request: ' + err);
+        }
+        else {
+            process.succeed('Template POST message successful. Response:' + body);
+        }
+    });
+};
+```
+
 ## GitHook termination
 Your GitHook must explicitly say when it has finished. It can reveal it succeeded or failed depending on which method you call. At the moment this doesn't really achieve much, but helps GitHooks.io monitor the proportion of successful and unsuccessful calls.
 
