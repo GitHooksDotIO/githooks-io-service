@@ -5,8 +5,10 @@ The current allowed parameter types are:
 
 * url
 * string
-* boolean (cast to 0 or 1 in the URL)
+* boolean
 * number
+
+You can also choose a 'select' type by not specifying a parameter type, but providing a list of `options` instead.
 
 GitHooks.io will validate `url` to make sure it is actually a URL, etc.
 
@@ -29,4 +31,11 @@ parameters:
     description: Who am I greeting?
     type:        string                # options: 'string', 'url', 'number', 'boolean', 'select'. default: 'string'
     required:    no                    # options: 'yes', 'no'. default: 'no'
+  satisfaction:
+    title:       How satisfied are you?
+    description: Rate our service.
+    options:
+      - Very satisfied
+      - Somewhat satisfied
+      - Dissatisfied
 ```
