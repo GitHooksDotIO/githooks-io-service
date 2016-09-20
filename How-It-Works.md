@@ -14,25 +14,25 @@ You're a user with a repository, and want to install a GitHook. *Your* repositor
 ## Installing a webhook
 You go to the GitHook page, and can see an 'Install' section. Right now, you haven't granted enough permissions to GitHooks.io yet - this GitHook requires Public/Private Repository access - so you'll have to click 'Grant additional permissions'.
 
-![Grant additional permissions](https://cloud.githubusercontent.com/assets/16819594/16716188/8f7a01b0-46ed-11e6-8751-e035a898950f.png)
+<img width="500" height="440px" src="https://cloud.githubusercontent.com/assets/16819594/16716188/8f7a01b0-46ed-11e6-8751-e035a898950f.png" alt="Grant additional permissions">
 
 Upon granting additional permissions, you're redirected back to the GitHook page, where you can choose which repository you want to install the GitHook to.
 
 Some GitHooks also have parameters you can play with. For instance, the PR Editor GitHook requires a URL to a markdown/text file which is to be appended to new Pull Requests.
 
-![screenshot of user input form](https://cloud.githubusercontent.com/assets/16819594/16172564/8bcfb37c-3584-11e6-9a34-286fa061b043.png)
+<img width="440" height="240" src="https://cloud.githubusercontent.com/assets/16819594/16172564/8bcfb37c-3584-11e6-9a34-286fa061b043.png" alt="screenshot of user input form">
 
 You hit 'Install GitHook': this creates a new webhook inside your repository settings.
 
-![screenshot of webhook entry on github](https://cloud.githubusercontent.com/assets/16819594/16172662/a987ea56-3584-11e6-8c3f-d9668e90aaaa.png)
+<img width="800" height="166" src="https://cloud.githubusercontent.com/assets/16819594/16172662/a987ea56-3584-11e6-8c3f-d9668e90aaaa.png" alt="screenshot of webhook entry on github">
 
 The webhook's payload URL is pre-defined for you, as is the content type (which currently has to be `application/x-www-form-urlencoded`), and the Secret. The Secret is completely unique to this GitHook installation on your repository, and will be used later on in the identification process.
 
-![screenshot of webhook config on github](https://cloud.githubusercontent.com/assets/16819594/16172665/b7fed900-3584-11e6-921b-3e316f476f86.png)
+<img src="https://cloud.githubusercontent.com/assets/16819594/16172665/b7fed900-3584-11e6-921b-3e316f476f86.png" alt="screenshot of webhook config on github" width="550" height="367">
 
 The event required by the GitHook is also selected automatically. You (the user) don't have to do anything!
 
-![screenshot of pre-selected webhook event](https://cloud.githubusercontent.com/assets/16819594/16172681/37634e24-3585-11e6-8b5f-cc3c01d8ad11.png)
+<img src="https://cloud.githubusercontent.com/assets/16819594/16172681/37634e24-3585-11e6-8b5f-cc3c01d8ad11.png" alt="screenshot of pre-selected webhook event" width="450" height="96">
 
 The GitHook is now active and ready.
 

@@ -29,8 +29,8 @@ parameters:
     description: Who am I greeting?
     # options: 'string', 'url', 'number', 'boolean', 'select'. default: 'string'
     type:        string
-    # options: 'yes', 'no'. default: 'no'
-    required:    no
+    # options: 'true', 'false'. default: 'false'
+    required:    false
   'curry_flavour':
     title:       Curry flavour
     description: What are you eating?
