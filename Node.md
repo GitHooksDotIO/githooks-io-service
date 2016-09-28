@@ -46,7 +46,7 @@ Your GitHook must explicitly say when it has finished. It can reveal it succeede
 
 To say that your GitHook has finished, you need to call one of the following methods:
 
-```
+```js
 process.succeed('All was good!');
 process.fail('This failed for some reason!');
 ```
