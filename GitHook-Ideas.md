@@ -29,6 +29,3 @@ When a new repo is created, automatically reconfigure the GitHub Issues labels w
 
 ### GitHook: Twitter integration
 By passing a Twitter handle and authentication token to a GitHook, it should be possible to automatically tweet when you tag a new release.
-
-### GitHook: AutoGif
-When you open a PR, AutoGif automatically inserts a GIF for you. (It requests a gif from giphy, and might do this after scanning your PR text for fun words to gif-ify, or it may be random, or could even be user directed, e.g. {autogif "unicorn"}). Would do a find-and-replace on {autogif}, otherwise append to PR body. 
