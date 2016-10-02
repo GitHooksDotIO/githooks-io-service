@@ -4,7 +4,7 @@ GitHooks.io runs its GitHooks on AWS Lambda infrastructure. You can [find out mo
 
 Whilst Lambda is awesome, it has its limitations. Crucially, **your GitHook must be entirely self-contained** (i.e. have no external dependencies), except for the modules made available to you in the `gh.modules` parameter. You CANNOT require any custom modules in the same repository. Your GitHook must be entirely self-contained in the file you specified as your entry point.
 
-That's really all you need to know about the infrastructure. Ready to start? There is a [boilerplate vanilla project](https://github.com/GitHooksIO/boilerplate-githook) just waiting to be cloned and worked on!
+That's really all you need to know about the infrastructure (if you want to know more, read [How GitHooks.io works](http://githooks.io/how-it-works)). Ready to start? There is a [boilerplate vanilla project](https://github.com/GitHooksIO/boilerplate-githook) just waiting to be cloned and worked on!
 
 ## Schema
 Your GitHook module will be passed a parameter which is split into three sets of utilities: `data`, `modules`, and `process`. An overview is presented below, but there is more detail in the sections that follow.
