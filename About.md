@@ -5,7 +5,7 @@ GitHooks.io provides:
 
 * a framework in which to write clean, maintainable webhooks
 * a hosted environment to serve your webhook endpoints
-* a plaform to share your webhooks with other dvelopers
+* a plaform to share your webhooks with other developers
 
 ## GitHooks.io as a framework
 We provide a framework in which to write your webhooks, taking the complexity out of retrieving access tokens, and with built-in support for parameterising your webhooks.  [Read our Getting Started guide](http://githooks.io/docs-node).
