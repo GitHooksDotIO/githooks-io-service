@@ -1,4 +1,6 @@
 # How It Works
+![githooks io architecture diagram](https://cloud.githubusercontent.com/assets/5111927/19019529/738765ec-8883-11e6-833e-f9f701f17c19.png)
+
 We'll explain how GitHooks.io works by going through a worked example: the [PR Editor GitHook](http://githooks.io/githooks/GitHooksIO/githook-pr-editor). We'll cover every step a user would take in getting the GitHook installed and seeing it working.
 
 The PR Editor allows you to provide a template which will be automatically appended to every new Pull Request - this is intended for appending checklists to Pull Requests. In February 2016, GitHub provided this functionality natively, so we no longer recommend using this GitHook - but it is still a good example for the purposes of this guide.
