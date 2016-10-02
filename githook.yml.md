@@ -3,15 +3,14 @@ GitHooks.io looks for a YAML file called `.githook.yml` in the root of your repo
 
 ```yaml
 title:       Hello World
-version:     0.1.0
-description: "This is my description of my Hello World application."
-thumbnail:   http://path/to/thumbnail.jpg # optional. Defaults to your user avatar.
+description: "Description of my Hello World application." # optional. Defaults to the description on GitHub.
+thumbnail:   http://path/to/thumbnail.jpg                 # optional. Defaults to your user avatar.
 
 # relative to the root
 entry_point: hello-world.js
 
-# specify the language your GitHook is written in (currently only node_js is supported)
-language: node_js
+# specify the AWS Lambda wrapper to run your GitHook inside (defaults to `node`)
+wrapper: node
 
 # require at least one event to trigger the GitHook. See 'Events' below.
 triggered_on:
@@ -39,8 +38,4 @@ parameters:
       - Chicken
       - Vegetable
 
-# optional
-tags:
-  - something
-  - something-else
 ```
