@@ -13,6 +13,8 @@ Start tracking how many repositories are using a given GitHook, giving users an 
 ### Add support for latest Webhook events
 GitHub added some new events in April: https://github.com/blog/2156-expanded-webhook-events
 
+And more in October: https://developer.github.com/changes/2016-10-11-pull-request-review-webhooks/
+
 ### Complete Webhook management
 Rather than just 1-click installs, you will now be able to delete GitHooks from within GitHooks.io or edit your custom parameters. You will be able to 'own' GitHooks installed by other users in your organisation, so that the GitHook runs as you and not them.
 
